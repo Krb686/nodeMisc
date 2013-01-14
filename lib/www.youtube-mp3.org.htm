@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="language" content="en" />
+  <meta name="description" content="Download your favorite YouTube videos as mp3 files without registration." />
+  <meta name="google" content="notranslate" />
+  <title>YouTube to mp3 Converter</title>
+  <link rel="stylesheet" href="/style.css" />
+
+  <script type="text/javascript" src="/lang/en.js?v=38"></script>
+  <script type="text/javascript" src="/client.js?v=38"></script>
+  <script type="text/javascript">
+    adcc = 'us';
+    enableBetaAds = false;
+  </script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-9749996-5']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body onload="init(); loadAds()">
+<div id="content" style="width:700px; padding-left:160px;">
+  <div style="width:480px; float:left;">
+  <h1><a href="/"><img src="/logo.gif" alt="YouTube mp3" width="290" height="59" /></a></h1>
+
+  <div id="progress_info">
+    <div id="error_text"></div>
+    <div id="image"></div>
+    
+    <div style="float:left; max-width:330px">
+      <div id="status_text"></div>
+      <div id="title"></div>
+      <div id="length"></div>
+      <div id="link_box" style="display:none">
+        <div id="link_box_title" style="font-weight:bold; text-decoration:underline"></div>
+        <div class="row">
+          <div id="link_box_bb_code_title" style="font-weight:bold"></div>
+          <input type="text" id="BBCodeLink" onclick="sAll(this)" />
+        </div>
+        <div class="row">
+          <div id="link_box_html_code_title" style="font-weight:bold"></div>
+          <input type="text" id="HTMLLink" onclick="sAll(this)" />
+        </div>
+        <div class="row">
+          <div id="link_box_direct_code_title" style="font-weight:bold"></div>
+          <input type="text" id="DirectLink" onclick="sAll(this)" />
+        </div>
+      </div>
+      <div id="v-ads"></div>
+      <div id="dl_link"></div>
+      <div id="progress"></div>
+      <div id="loader"><img src="ajax-loader-b.gif" alt="loading.." width="16" height="11" /></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+
+    
+  <noscript>
+    <div class="warning">You have to enable JavaScript to use this Service!</div>
+  </noscript>
+  
+  <div id="form">
+    <div style="width:466px; padding: 5px; margin-bottom:5px; background:#f6baba; border:solid 1px #a24242; margin-top:1px; float:left; font-size:13px; font-family:Arial;"><b><span style="color:#790a0a">Support us:</span> <a href="http://www.change.org/petitions/google-inc-youtube-llc-allow-third-party-recording-tools-for-youtube" target="_blank">Sign a public petition in favor of YouTube recording tools</a></b></div>
+
+    <form method="get" action="/" id="submit-form">
+      <input type="text" id="youtube-url" value="http://www.youtube.com/watch?v=KMU0tzLwhbE" onclick="sAll(this)" autocomplete="off" style="width:466px;" />          
+      <div style="text-align:center; margin-top:3px">
+        <input type="submit" id="submit" value="Convert Video" style="float:none; width:175px" disabled="disabled" />
+      </div>
+    </form>
+  </div>
+  
+  
+    
+        <div style="margin-top:43px; text-align:center; padding:5px 0; background:#eee; border-top:solid 1px #ccc;" id="rad">
+        </div>
+    
+  
+  
+  <div class="clear"></div>
+
+  <div id="description">
+    <h2>What is YouTube mp3?</h2>
+    <p>YouTube-mp3.org is the easiest online service for converting videos to mp3. You do not need an account, the only thing you need is a YouTube URL. We will start to convert the audiotrack of your videofile to mp3 as soon as you have submitted it and you will be able to download it. Different from other services the whole conversion process will be perfomed by our infrastructure and you only have to download the audio file from our servers. Because of this our software is platform-independent: You can use it with your Mac, a Linux PC or even an iPhone. All our conversions will be perfomed in high quality mode with a bitrate of at least 128 kBit/s. Do not worry, our service is completely free. We need approximately 3 to 4 minutes per video.</p>
+  </div>
+
+  <div id="footer">
+    <div style="float:right; text-align:right">
+      <a href="http://blog.youtube-mp3.org/">Blog</a> &middot; <a href="/addons">Addons</a> &middot; <a href="/privacy" rel="nofollow">Privacy</a> &middot; <a href="/impress" rel="nofollow">Impress</a>
+
+    </div>
+    <a href="/">English</a> &middot; <a href="/de">Deutsch</a> &middot; <a href="/tr">Türkçe</a> &middot; <a href="/pl">Polski</a> &middot; <a href="/fr">Français</a> &middot; <a href="/ka">ქართული</a><br /><a href="/eu">Euskara</a> &middot; <a href="/es">Español</a> &middot; <a href="/gr">Ελληνικά</a> &middot; <a href="/nl">Nederlands</a> &middot; <a href="/zh">繁體中文</a><br /><a href="/it">Italiano</a> &middot; <a href="/sv">Svenska</a> &middot; <a href="/sk">Slovensky</a> &middot; <a href="/sr">Српски</a> &middot; <a href="/ar">العربية</a><br /><a href="/pt">Português</a> &middot; <a href="/sl">Slovenščina</a>
+
+  </div>
+  </div>
+  
+  
+    
+      <div style="float:left; width:160px; padding:5px; background:#eee; border-left:solid 1px #ccc; border-top:solid 1px #ccc; margin-left:15px; text-align:left" id="sad">
+      </div>
+    
+  
+</div>
+
+<script type="text/javascript">
+  function fc(){
+      try{
+      if (top.location != location) {
+        bFrame = true;
+        var i = new Image();
+        i.src = '/_stat.gif?i='+document.referrer;
+      }
+      } catch(e){}
+  }
+  fc();
+</script>
+</body>
+</html>
