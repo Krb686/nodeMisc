@@ -1,0 +1,12 @@
+{
+  "name": "nodeMisc",
+  "description": "Some miscellanious node files stored in a collective lib",
+  "version": "0.0.1",
+  "authors":[
+  	"Kevin Briggs <krb686@gmail.com> (https://github.com/Krb686)"
+  ],
+  "repository" : {
+  	"type" : "git",
+  	"url" : "https://github.com/Krb686/nodeMisc.git"
+  }
+}
